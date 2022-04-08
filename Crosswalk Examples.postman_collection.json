@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "ac8d0b2f-1ac8-4cd2-bda0-6340d0d9142f",
+		"name": "Crosswalk Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crosswalk from HPO to SNOMED CT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?targetSource=SNOMEDCT_US&ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"crosswalk",
+						"current",
+						"source",
+						"HPO",
+						"HP:0001947"
+					],
+					"query": [
+						{
+							"key": "targetSource",
+							"value": "SNOMEDCT_US"
+						},
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieve all SNOMED CT concepts that share a UMLS CUI with HPO identifier HP:0001947, Renal tubular acidosis"
+			},
+			"response": []
+		},
+		{
+			"name": "Crosswalk from HPO to all vocabularies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/crosswalk/current/source/HPO/HP:0001947?ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"crosswalk",
+						"current",
+						"source",
+						"HPO",
+						"HP:0001947"
+					],
+					"query": [
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieve codes from any vocabulary that share a UMLS CUI with HPO identifier HP:0001947, Renal tubular acidosis"
+			},
+			"response": []
+		}
+	]
+}

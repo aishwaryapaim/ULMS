@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "18f578d3-bba8-4809-ab80-72b2cc9088b6",
+		"name": "CUI-based lookups",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basic CUI lookup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C1527336?ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"content",
+						"current",
+						"CUI",
+						"C1527336"
+					],
+					"query": [
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieves the CUI for C1527336, Sjogren's Syndrome"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Synonyms from a CUI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C1527336/atoms?sabs=SNOMEDCT_US,ICD10CM&ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"content",
+						"current",
+						"CUI",
+						"C1527336",
+						"atoms"
+					],
+					"query": [
+						{
+							"key": "sabs",
+							"value": "SNOMEDCT_US,ICD10CM"
+						},
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieves atoms from SNOMEDCT_US and ICD-10-CM from the CUI for Sjogren's Syndrome."
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve English-language preferred terms and synonyms for a CUI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C1527336/atoms?language=ENG&ttys=PT,SY&ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"content",
+						"current",
+						"CUI",
+						"C1527336",
+						"atoms"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "ENG"
+						},
+						{
+							"key": "ttys",
+							"value": "PT,SY"
+						},
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieves the English PT and SY atoms of C1527336"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve the highest-ranking atom of a CUI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/content/current/CUI/C1299531/atoms/preferred?ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"content",
+						"current",
+						"CUI",
+						"C1299531",
+						"atoms",
+						"preferred"
+					],
+					"query": [
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieve the highest ranking atom of C1299531, Severe bipolar disorder"
+			},
+			"response": []
+		}
+	]
+}

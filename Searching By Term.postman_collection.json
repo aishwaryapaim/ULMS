@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "2fbaacfd-4c04-4a05-bdb8-1b1f7dc307b0",
+		"name": "Searching By Term",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve CUIs based on an exact term match.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/search/current?string=diabetic foot&searchType=exact&ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"search",
+						"current"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "diabetic foot"
+						},
+						{
+							"key": "searchType",
+							"value": "exact"
+						},
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieves the CUI for 'diabetic foot' based on exact matching."
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve SNOMED CT concepts based on a term search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://uts-ws.nlm.nih.gov/rest/search/current?string=idiopathic neuropathy&sabs=SNOMEDCT_US&returnIdType=sourceUi&ticket={service-ticket}",
+					"protocol": "https",
+					"host": [
+						"uts-ws",
+						"nlm",
+						"nih",
+						"gov"
+					],
+					"path": [
+						"rest",
+						"search",
+						"current"
+					],
+					"query": [
+						{
+							"key": "string",
+							"value": "idiopathic neuropathy"
+						},
+						{
+							"key": "sabs",
+							"value": "SNOMEDCT_US"
+						},
+						{
+							"key": "returnIdType",
+							"value": "sourceUi"
+						},
+						{
+							"key": "ticket",
+							"value": "{service-ticket}"
+						}
+					]
+				},
+				"description": "Retrieves the CUI for 'idiopathic neuropathy' based on exact matching."
+			},
+			"response": []
+		}
+	]
+}
